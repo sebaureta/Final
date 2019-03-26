@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ p { text-align: center;}
+ h1  { text-align: center;}
+ h3  { text-align: center;}
+ tbody {text-align: center;}
+
+ td { text-align: center;}
+ tr { text-align: center;}
+
+
+ div.thumbnail {
+   border-color: black;
+   background-color: #CFD1D0;
+ }
