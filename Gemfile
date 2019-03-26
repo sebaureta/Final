@@ -11,6 +11,7 @@ gem 'sqlite3', '~> 1.3.6'
 # Authentification rubygems
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
