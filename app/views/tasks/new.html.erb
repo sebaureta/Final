@@ -1,5 +1,12 @@
-<h1>New Task</h1>
+<%= form_with model: @task, local:true do |f| %>
+  <h1>Ingresar Tarea a Realizar<h1>
+    <p><%= f.text_field :details %></p>
+<div class="form-group">
+  <%= f.label :imagen %>
+  <%= f.file_field :image, autofocus: true, class: 'form-control' %>
+</div>
+<p><%= f.button :Ingresar, class: 'btn btn-success' %></p>
 
-<%= render 'form', task: @task %>
+<% end %>
 
 <%= link_to 'Back', tasks_path %>

@@ -2,6 +2,22 @@
 
 <h1>Tasks</h1>
 
+<p> <%= link_to 'Crear Tarea', new_task_path, class: 'btn btn-primary'%> </p>
+<div class="row center">
+  <% @tasks.each do |task| %>
+  <div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+      <a><%= link_to(image_for(task, size: 300)) %></a>
+      <div class="caption">
+        <h3> <%= task.details %> </h3>
+        <p><%= link_to 'Detalles', task_path(task.id), class: 'btn btn-info'%></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
 <table>
   <thead>
     <tr>
@@ -15,6 +31,7 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.details %></td>
+
         <td><%= task.image %></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
