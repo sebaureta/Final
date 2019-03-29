@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  root 'assingments#index'
+  get 'assingments/create'
+  resources :assingments, only: [:index, :update]
   resources :tasks
   devise_for :users
 
-  root 'tasks#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

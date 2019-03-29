@@ -5,4 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   mount_uploader :avatar, AvatarUploader
+  has_many :assingments
+  has_many :tasks, through: :assingments, dependent: :destroy
+
+  after_create :addTasks
+
+  def addTasks
+    Task.all.each do |i|
+      self.assingments.build(task: i)
+      self.save
+    end
+  end
 end

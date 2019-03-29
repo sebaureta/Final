@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<p id="notice"><%= notice %></p>
+<div class="row center">
+  <% @assingments.each do |ass| %>
+  <div class="col-sm-4 col-md-4">
+    <div class="thumbnail">
+      <div >
+        <%= image_tag ass.task.image.url, class:"img-responsive" if ass.task.image?%>
+      </div>
+      <div class="caption">
+        <h5><%= ass.task.details %></h5>
+        <% if ass.completed == true %>
+          <p><%= link_to 'Tarea completada', assingment_path(ass), class: 'btn btn-success', method: :patch %> </p>
+          <% else %>
+          <p><%= link_to 'Completar Tarea', assingment_path(ass), class: 'btn btn-success', method: :patch %> </p>
+          <% end %>
+      </div>
+    </div>
+
+  </div>
+  <% end %>
+</div>

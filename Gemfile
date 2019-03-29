@@ -12,6 +12,8 @@ gem 'sqlite3', '~> 1.3.6'
 gem 'devise'
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
