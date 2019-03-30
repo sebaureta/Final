@@ -5,6 +5,9 @@ class AssingmentsController < ApplicationController
     @assingments = current_user.assingments
   end
 
+  def show
+  end
+
   def create
     @task.find(params[:task_id])
     @assingment = Assingment.new(task: @task, user: current_user)

@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
   has_many :assingments
-  has_many :tasks, through: :assingments, dependent: :destroy
+  has_many :tasks, through: :assingments
 
   after_create :addTasks
 

@@ -1,4 +1,4 @@
 class Assingment < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  belongs_to :task, dependent: :destroy
+  belongs_to :user
+  belongs_to :task
 end

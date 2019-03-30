@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @assingments.details %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @assingments.image %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', task_path, class: 'btn-warning' %>

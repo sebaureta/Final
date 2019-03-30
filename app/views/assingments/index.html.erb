@@ -2,7 +2,6 @@
 
 <h1>Tasks</h1>
 
-<p id="notice"><%= notice %></p>
 <div class="row center">
   <% @assingments.each do |ass| %>
   <div class="col-sm-4 col-md-4">
@@ -13,9 +12,9 @@
       <div class="caption">
         <h5><%= ass.task.details %></h5>
         <% if ass.completed == true %>
-          <p><%= link_to 'Tarea completada', assingment_path(ass), class: 'btn btn-success', method: :patch %> </p>
+          <p><%= link_to 'La tarea está Completa, presiona para reiniciar', assingment_path(ass), class: 'btn btn-success', method: :patch %> </p>
           <% else %>
-          <p><%= link_to 'Completar Tarea', assingment_path(ass), class: 'btn btn-success', method: :patch %> </p>
+          <p><%= link_to 'La tarea está Incompleta, presiona para completarla', assingment_path(ass), class: 'btn btn-danger', method: :patch %> </p>
           <% end %>
       </div>
     </div>

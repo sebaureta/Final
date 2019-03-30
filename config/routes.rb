@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'assingments#index'
   get 'assingments/create'
-  resources :assingments, only: [:index, :update]
+  resources :assingments
   resources :tasks
   devise_for :users
 

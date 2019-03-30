@@ -8,25 +8,30 @@
 
   Task.create(
     details: 'Bailar Cueca',
-    image: 'cueca.jpg'
+    image: 'cueca'
   )
+
   Task.create(
     details: 'Comer Anticucho',
-    image: 'anticuchos.jpg'
+    image: 'anticuchos'
   )
+
   Task.create(
     details: 'Encumbrar Volantín',
-    image: 'volantin.jpg'
+    image: 'volantin'
   )
+
   Task.create(
     details: 'Copmer Empanada',
-    image: 'empanada.jpg'
+    image: 'empanada'
   )
+
   Task.create(
     details: 'Jugar Rayuela',
-    image: 'rayuela.jpg'
+    image: 'rayuela'
   )
+
   Task.create(
     details: 'Jugar Trompo',
-    image: file = File.open(File.join(Rails.root,'app/assets/images/trompo.jpg'))
-  )
+    image: 'trompo'
+   )
