@@ -10,7 +10,7 @@ gem 'sqlite3', '~> 1.3.6'
 
 # Authentification rubygems
 gem 'devise'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
